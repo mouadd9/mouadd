@@ -1,0 +1,181 @@
+/*=============== FONT-FACE ===============*/
+@font-face {
+  font-family: 'MonoFont';
+  src: url(./fonts/SpaceMono-Regular.ttf) format('truetype');
+}
+
+/*=============== BASE STYLES ===============*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(./images/background.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*=============== HEADER ===============*/
+header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 150px 0 150px 60px;
+  margin: 0;
+  background-color: rgba(249, 176, 254, 0.45);
+  border-bottom: 10px solid rgba(255, 0, 183, 0.4);
+}
+
+h1 {
+  font-family: 'MonoFont';
+  font-weight: 4000;
+  font-size: 100px;
+  width: 85%;
+  color: white;
+  
+}
+
+h1:hover {
+  color: rgb(38, 0, 53);
+ transition: color .4s ease-in ;
+  
+}
+
+/*=============== NAVIGATION ===============*/
+nav {
+  background-color: hsla(0, 0%, 100%, 0.85);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  position: sticky;
+  top: 0px;
+}
+
+ul {
+  text-align: left;
+  position: sticky;
+  top: 0px;
+}
+
+li {
+  font-family: 'MonoFont';
+  font-weight: 600;
+  font-size: 27px;
+  display: block;
+  padding-bottom: 7px;
+  clear: both;
+}
+
+li img {
+  width: 20px;
+  float: left;
+  padding: 10px 6px 4px 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(38, 0, 53);
+}
+
+a:hover {
+  color: rgb(255, 0, 183);
+  transition: color .2s ease-in-out;
+  font-size: 110%;
+  transition: font-size .2s ;
+}
+a:active{
+  color: rgb(151, 7, 110);
+}
+
+
+/*=============== MAIN CONTENT ===============*/
+main {
+  background-color: white;
+  padding-top: 10px;
+  position: relative;
+  z-index: 100;
+  border-top: 10px solid rgb(38, 0, 53);
+  margin-bottom: 40px;
+}
+
+/*=============== SECTION ===============*/
+.section {
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(87, 82, 93, 0.7);
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  display: inline-block;
+  width: 95%;
+  padding: 25px 90px;
+  margin: 0 20px;
+  margin-left: 35px;
+}
+
+/*=============== PARAGRAPHS AND IMAGES ===============*/
+p {
+  font-family: 'MonoFont';
+  width: 30%;
+  float: left;
+  font-size: 21px;
+  line-height: 25px;
+  word-spacing: 0.04em;
+}
+
+img {
+  float: right;
+}
+
+span {
+  font-style: italic;
+}
+
+/*=============== HEADINGS ===============*/
+h2 {
+  font-family: 'MonoFont';
+  color: rgb(255, 0, 183);
+  font-size: 35px;
+  margin-bottom: 0px;
+  font-weight: 1000;
+}
+
+/*=============== FOOTER ===============*/
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+h3 {
+  font-family: 'MonoFont';
+  margin: 7px 3px;
+  padding: 0;
+  float: right;
+  color: black;
+}
+
+
+/* For smaller screens */
+@media screen and (max-width: 1200px) {
+  .section {
+    text-align: center;
+  }
+
+  .section h2,
+  .section p {
+    float: none;
+    width: 80%;
+    margin: 1rem auto;
+    }
+
+  .section img {
+    float: none;
+    margin: 1.5rem auto;
+    }
+}
