@@ -11,7 +11,6 @@ char *ettiquettesUniques;
 int *etatsInitial;
 int *etatsFinal;
 int *etatsAccessibles;
-char listdesmots[100];
 int nbrEtatsAccessible;
 int nbrEtiquettesUniques;
 int nbrtransitions;
