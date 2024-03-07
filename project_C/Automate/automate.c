@@ -448,7 +448,6 @@ int main()
             break;
         case 9:
             printf("-------------------Au revoir!----------------\n");
-            printf("-------------------- ^._.^ -------------------");
             break;
         default:
             printf("Option invalide, veuillez réessayer.\n");
@@ -463,6 +462,7 @@ int main()
     free(etatsInitial);
     free(etatsFinal);
     free(etatsAccessibles);
+
 
     return 0;
 }
