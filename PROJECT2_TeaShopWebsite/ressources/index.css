@@ -3,49 +3,67 @@
     src: url(./Rubik-Regular.ttf) format('truetype');
 }
 
+/* General Reset and Root Elements */
 html {
     scroll-behavior: smooth;
 }
-
 body {
+    font-family: rubik, sans-serif;
+    font-size: 115%;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: rubik;
-    font-size: 115%;
     background-color: rgba(188, 144, 78, 0.982);
 }
 
+/* Header Styles */
 header {
     height: 75px;
     width: 100%;
     position: fixed;
-    z-index: 100;
     top: 0;
-    border-bottom: 1px solid seashell;
+    z-index: 100;
     background-color: black;
     opacity: 0.8;
+    border-bottom: 4px solid seashell;
 }
 
-a {
+nav {
+    display: flex;
+    height: 100%;
+}
+nav img {
+    height: 50px;
+    margin: 10px 20px;
+}
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+    width: 100%;
+}
+ul li {
+    list-style: none;
+    padding-left: 4px;
+}
+li a {
+    color: white;
+    background-color: black;
     padding: 23px;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    white-space: nowrap;
     height: 100%;
     width: 100%;
-    background-color: black;
-
 }
-
 a:hover {
     background-color: rgb(255, 255, 255);
     color: black;
     font-size: 120%;
     transition: background-color 0.75s ease-in-out, color 0.5s ease, font-size 0.5s ease;
 }
-
 a:active {
     background-color: rgba(255, 255, 255, 0.294);
     color: rgba(0, 0, 0, 0.447);
@@ -53,31 +71,19 @@ a:active {
     transition: background-color 0.3s ease-in-out, color 0.3s ease, font-size 0.3s ease;
 }
 
-nav {
-    display: flex;
-    height: 100%;
+/* Media Queries */
+@media screen and (max-width: 650px){
+    ul a {
+        padding: 23px 10px ;
+    }
+    ul{
+        padding: 5px;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
 }
 
-nav img {
-    height: 50px;
-    margin: 10px 20px;
-}
-
-ul {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 30px;
-}
-
-ul li {
-    padding-left: 4px;
-    list-style-type: none;
-
-
-}
+/* Main Content Styles */
 
 main {
     position: relative;
@@ -87,7 +93,6 @@ main {
     align-items: center;
     height: 100%;
 }
-
 main div {
     margin-bottom: 20px;
 }
@@ -101,12 +106,11 @@ main div {
     justify-content: center;
     align-items: center;
     padding: auto;
-    padding-bottom: 20px;
-    border-bottom: 25px solid black;
+    padding-bottom: 100px;
+    margin-bottom: 0px;
     opacity: 1;
 
 }
-
 .container0::before {
     content: "";
     position: absolute;
@@ -124,49 +128,128 @@ main div {
 
 .text {
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: rgb(0, 0, 0);
     font-size: 450%;
-    padding: 100px;
-    padding-left: 50px;
-
+    padding: 0px 100px;
+    width: auto;
 }
 
 .text h4 {
     font-size: 70%;
     margin-top: 0px;
+    width: 100%;
+}
+.text h2 {
+    margin-bottom: 0px;
+    margin-top: 50px;
 }
 
-.text h2 {
+.qualities{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.qualities h4{
+    white-space: nowrap;
+    margin: 10px;
+    font-size: 65%;
+}
 
-    margin-bottom: 0px;
+/*Media Queries */
+
+@media screen and (max-width: 600px){
+    .text {
+       padding: 30px;
+       font-size: 240%;
+    }
+    .text h2 {
+        white-space: nowrap;
+
+    }
+    .qualities{
+        flex-direction: column;
+       justify-content: center;
+        align-items: center;
+    }   
+}
+@media screen and (max-width: 860px), ( min-width:600px){
+    .text {
+       padding: 60px;
+       font-size: 300%;
+    }
+    .text h2 {
+        white-space: nowrap;
+    }
+     .qualities{
+         flex-direction: column;
+        justify-content: center;
+         align-items: center;
+     }
+}
+@media screen and (max-width: 1250px) , (min-width:800px){
+    .text {
+       padding: 75px;
+       font-size: 375%;
+    }
+    .text h2 {
+        white-space: nowrap;
+    }
+    .qualities{
+        flex-direction: column;
+       justify-content: center;
+        align-items: center;   
+    } 
+}
+
+.menu  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.menu .special{
+    border-bottom: 4px solid white;
+    border-top: 4px solid white;
+    padding: 23px;
+    width:100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+.menu .special:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .container1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
-
+    text-align: center;
+    padding: 10px 50px 40px 50px;
 }
-
 .container1 h2 {
     font-size: 40px;
     margin-bottom: 0px;
-
 }
 
 .container2 {
     width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 25px; 
 }
 
-.container3 {
-    
+.container3 {  
     position: relative;
     height: 100%;
     width: 100%;
@@ -191,7 +274,6 @@ main div {
     opacity: 0.70;
     z-index: -1;
 }
-
 .container3 h2 {
     font-size: 50px;
     margin: 10px;
@@ -202,7 +284,6 @@ main div {
 .image {
     text-align: center;
 }
-
 .image img {
     height: 200px;
     width: 300px;
@@ -212,11 +293,10 @@ main div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 80%;
-    gap: 10px;
+    gap: 25px;
 }
-
 
 .location {
     background-color: black;
@@ -228,15 +308,12 @@ main div {
     justify-content: center;
     align-items: center;
 }
-
-
 div.location {
 
     min-width: 10%;
     min-height: 10%;
     transition: transform 0.1s ease-in-out;
 }
-
 div.location:hover {
     background-color: rgb(255, 255, 255);
     color: black;
@@ -248,5 +325,4 @@ div.location:hover {
 footer {
     text-align: center;
     margin-top: 70px;
-
 }
