@@ -463,6 +463,5 @@ int main()
     free(etatsFinal);
     free(etatsAccessibles);
 
-
     return 0;
 }
