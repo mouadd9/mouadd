@@ -1,13 +1,3 @@
-ca
-cca
-caa
-ccaa
-rbp
-rrp
-rbpn
-af
-aft
-azf
-azzf
-ezf
-ef
+aa
+a
+aab
